@@ -19,7 +19,7 @@ Redis is used to persistently store the alarm counters data, with the help of *P
 ## Monitoring
 For monitoring an external repository was used, [Kube-Prometheus](https://github.com/prometheus-operator/kube-prometheus), which contains Prometheus, Grafana and Alertmanager deployment as well. The created dashboard and alertrule are available at the [monitoring](kubernetes_files/monitoring) directory.
 ## Results
-Once all resources are started, curl can be used to test access to the endpoints of the Flask application. Inside Grafana you can see how many non-system pods are running, if too many alarms are received by the Flask application. Pictures can be found in the [pictures](results) directory.
+Once all resources are started, curl can be used to test access to the endpoints of the Flask application. Inside Grafana you can see how many non-system pods are running, if too many alarms are received by the Flask application. Pictures can be found in the [results](results) directory.
 ## Quickstart
 - Make sure *minikube*, *docker*, *git* and *terraform* are available at the host. 
 - Run `terraform init` and `terraform apply` at [terraform](terraform) directory. 
@@ -35,3 +35,5 @@ Used software versions:
 - terraform v1.2.7
 - docker engine v20.10.17
 - macOS Monterey V12.6
+## Disclaimer
+The sole purpose of the docker image is to run the Flask application and connect to the Redis container, in this state it cannot run separately, which is why the depends_on keyword appears in terraform. 
