@@ -1,5 +1,5 @@
 # DevOps Interview Tasks by aiMotive
-This repository contains everything (except the [monitoring](https://github.com/madacsbotond/aimotive/edit/main/Readme.md#monitoring)).
+This repository contains everything (except the [monitoring](https://github.com/madacsbotond/aimotive#monitoring)).
 ## Requirements
 To deploy the services, applications and monitoring you have these to install these:
 - [minikube](https://minikube.sigs.k8s.io/docs/start/)
